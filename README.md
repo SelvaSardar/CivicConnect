@@ -1,103 +1,157 @@
 # CivicConnect – Smart Civic Complaint Management System
 
-CivicConnect is a web-based civic complaint management system designed to help citizens report public issues and enable administrators to manage complaints efficiently.
+CivicConnect is a full-stack web application designed to help manage civic complaints, organize staff assignments, and improve the process of tracking public issues.
 
-The platform aims to improve complaint tracking, staff coordination, and transparency in civic issue resolution.
+The application provides an administrative dashboard for managing users, staff members, and complaint details.
 
-## 🚀 Features
+## ✨ Features
 
-- **Admin Dashboard** – View and manage civic complaints and users.
+- **Admin Dashboard** – View and manage civic complaint information.
 - **User Management** – View and manage registered users.
-- **Staff Management** – View staff information and coordinate complaint assignments.
-- **Complaint Details** – View detailed information about reported complaints.
-- **Staff Assignment** – Assign complaints to the appropriate staff members.
-- **Complaint Tracking** – Organize and monitor complaints through their workflow.
+- **Staff Management** – Manage staff information.
+- **Complaint Details** – View detailed complaint information.
+- **Staff Assignment** – Assign complaints to appropriate staff members.
+- **Interactive Maps** – Map functionality using Leaflet and React Leaflet.
 
 ## 🛠️ Tech Stack
 
-Update this list to match the technologies actually used in the project.
+### Frontend
+- React 19
+- Vite
+- JavaScript
+- React Router
+- Axios
+- Leaflet and React Leaflet
+- Lucide React icons
 
-- **Frontend:** React.js, Vite, HTML, CSS, JavaScript
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB
-- **Version Control:** Git and GitHub
+### Backend
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JSON Web Tokens (JWT)
+- bcryptjs
+- dotenv
+
+### Tools
+- Git
+- GitHub
+- npm
 
 ## 📁 Project Structure
 
 ```text
 CivicConnect/
-├── client/              # Frontend application
-├── civicconnect/        # Backend or supporting project folder
+├── client/              # React frontend
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+├── civicconnect/        # Backend application
+│   ├── server.js
+│   └── package.json
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
 └── README.md
 ```
 
-Update the folder descriptions to match the actual contents of your project.
+Adjust the structure above to match the actual files and folders in your repository.
 
 ## ⚙️ Getting Started
 
 ### Prerequisites
 
-Install the following before running the project:
+Install the following:
 
 - Node.js
 - npm
-- Git
+- MongoDB or access to a MongoDB database
 
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/SelvaSardar/CivicConnect
 cd CivicConnect
 ```
 
-### 2. Install Dependencies
-
-Install the root dependencies:
+### 2. Install frontend dependencies
 
 ```bash
+cd client
 npm install
 ```
 
-If the frontend and backend have separate `package.json` files, install dependencies inside each respective folder as well.
+### 3. Install backend dependencies
 
-### 3. Configure Environment Variables
+Open a second terminal from the project root and run:
 
-Create the required `.env` file for the backend and configure the necessary environment variables, such as database connection details and API settings.
+```bash
+cd civicconnect
+npm install
+```
 
-Never upload real passwords, API keys, or other secrets to GitHub.
+### 4. Configure environment variables
 
-### 4. Run the Application
+Create a `.env` file in the backend directory and configure the environment variables required by the application.
 
-Use the development commands defined in the relevant `package.json` files.
+For example, these may include:
 
-For example, if the frontend uses Vite:
+- MongoDB connection URI
+- JWT secret
+- Backend port
+
+Use the exact variable names expected by your backend code. Never commit real secrets or credentials to GitHub.
+
+### 5. Start the backend
+
+In the backend terminal:
 
 ```bash
 npm run dev
 ```
 
-If the backend has a separate start script, open its folder and run the appropriate command.
+This runs the backend using Nodemon and `server.js`.
 
-## 🔮 Future Enhancements
+For a regular start without Nodemon:
 
-- Citizen registration and authentication
+```bash
+npm start
+```
+
+### 6. Start the frontend
+
+In another terminal:
+
+```bash
+cd client
+npm run dev
+```
+
+Open the local URL displayed by Vite in your terminal.
+
+## 🔐 Security
+
+- Keep database credentials and JWT secrets in environment variables.
+- Do not commit `.env` files or sensitive credentials.
+- Validate and protect backend API endpoints appropriately.
+
+## 🚀 Future Enhancements
+
+- Citizen complaint submission and tracking
 - Complaint status notifications
-- Complaint filtering and search
-- Improved reporting and analytics
-- Live deployment for public access
+- Advanced search and filtering
+- Analytics and reporting
+- Production deployment
 
-Only list planned enhancements that are not already implemented.
+Update this section to reflect the features planned for future development.
 
 ## 👨‍💻 Author
 
-**Your Name**
+**SelvaSardar**
 
 - GitHub: https://github.com/SelvaSardar
-- Project: https://github.com/SelvaSardar/CivicConnect
+- Project Repository: https://github.com/SelvaSardar/CivicConnect
 
 ## 📄 License
 
-Choose and add an appropriate open-source license if you intend to distribute the project under one.
+Specify the project's license here if you choose to distribute it under an open-source license.
